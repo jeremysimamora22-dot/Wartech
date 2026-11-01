@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="id" data-bs-theme="light">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Menu - WarTech</title>
+<link rel="icon" href="img/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<script>document.documentElement.setAttribute('data-bs-theme',localStorage.getItem('wt_tema')||'light')</script>
+</head>
+<body data-base="">
+<div id="nav"></div>
+<main class="wt-main container">
+<h1 class="h2">Menu</h1><p class="muted">Pilih makanan dan minuman yang ingin kamu pesan.</p>
+<div class="row g-2 mb-3"><div class="col-sm"><div class="position-relative"><i class="bi bi-search position-absolute top-50 translate-middle-y ms-3 muted"></i><input id="q" class="form-control ps-5" placeholder="Cari kode / nama / kategori..." aria-label="Cari menu"></div></div>
+ <div class="col-sm-4 col-lg-3"><select id="urut" class="form-select" aria-label="Urutkan"><option value="nama">Nama A-Z</option><option value="murah">Harga termurah</option><option value="mahal">Harga tertinggi</option><option value="pilihan">Pilihan kantin</option></select></div></div>
+<div class="d-flex flex-wrap gap-2 mb-3" id="kats"></div><p class="small muted" id="jumlah"></p>
+<div class="row g-3 g-md-4" id="grid"></div>
+<div id="kosong" class="wt-card empty d-none"><i class="bi bi-search"></i><h2 class="h5">Menu tidak ditemukan</h2><p class="muted">Coba kata kunci atau kategori lain.</p><button class="btn btn-ghost" id="reset">Hapus filter</button></div>
+<div class="text-center mt-4"><button class="btn btn-ghost d-none" id="more">Tampilkan lebih banyak</button></div>
+</main>
+<div id="foot"></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/layout.js"></script>
+<script src="js/menu.js"></script>
+</body>
+</html>

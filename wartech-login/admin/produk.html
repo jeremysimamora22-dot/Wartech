@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="id" data-bs-theme="light">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Produk & Stok - WarTech</title>
+<link rel="icon" href="../img/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+<script>document.documentElement.setAttribute('data-bs-theme',localStorage.getItem('wt_tema')||'light')</script>
+</head>
+<body data-base="../">
+<main id="isi"><div class="row g-2 mb-3"><div class="col-md"><input id="q" class="form-control" placeholder="Cari berdasarkan kode / nama / kategori..." aria-label="Cari produk"></div>
+<div class="col-6 col-md-3"><select id="fk" class="form-select" aria-label="Filter kategori"></select></div><div class="col-6 col-md-auto d-flex align-items-center"><div class="form-check"><input class="form-check-input" type="checkbox" id="low"><label class="form-check-label small" for="low">Stok menipis</label></div></div>
+<div class="col-md-auto"><button class="btn btn-wt w-100" id="tambah"><i class="bi bi-plus-lg"></i> Tambah Produk</button></div></div><p class="small muted" id="jml"></p>
+<div class="wt-card p-2"><div class="table-responsive"><table class="table wt-table"><thead><tr><th>Gambar</th><th>Kode</th><th>Nama</th><th>Kategori</th><th>Harga</th><th>Stok</th><th class="text-end">Aksi</th></tr></thead><tbody id="tb"></tbody></table></div></div></main>
+<div class="modal fade" id="m" tabindex="-1"><div class="modal-dialog modal-dialog-centered modal-lg"><form class="modal-content" id="fm" style="border-radius:24px" novalidate><div class="modal-body p-4"><h2 class="h5 mb-3" id="mj"></h2>
+<div class="row g-3"><div class="col-sm-4"><label class="form-label" for="kode">Kode *</label><input id="kode" class="form-control" maxlength="12" placeholder="MB-005"></div><div class="col-sm-8"><label class="form-label" for="nama">Nama produk *</label><input id="nama" class="form-control" maxlength="50"></div>
+<div class="col-sm-4"><label class="form-label" for="kat">Kategori *</label><select id="kat" class="form-select"></select></div><div class="col-sm-4"><label class="form-label" for="harga">Harga (Rp) *</label><input id="harga" type="number" min="0" class="form-control"></div><div class="col-sm-4"><label class="form-label" for="stok">Stok *</label><input id="stok" type="number" min="0" class="form-control"></div>
+<div class="col-12"><label class="form-label" for="desk">Deskripsi</label><input id="desk" class="form-control" maxlength="120"></div>
+<div class="col-sm-8"><label class="form-label" for="gbr">Gambar (path/URL, atau unggah file)</label><input id="gbr" class="form-control mb-2" placeholder="img/nasi-goreng.svg"><input id="file" type="file" accept="image/*" class="form-control"></div><div class="col-sm-4 text-center"><img id="pv" class="thumb" style="width:100%;height:96px" alt="pratinjau"></div>
+<div class="col-12 d-flex gap-4"><div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="aktif" checked><label class="form-check-label" for="aktif">Aktif (tampil di menu)</label></div><div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="unggul"><label class="form-check-label" for="unggul">Pilihan kantin</label></div></div></div>
+<div class="text-danger small mt-3" id="er"></div><div class="d-flex justify-content-end gap-2 mt-3"><button type="button" class="btn btn-ghost" data-bs-dismiss="modal">Batal</button><button class="btn btn-wt px-4">Simpan</button></div></div></form></div></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/data.js"></script>
+<script src="../js/layout.js"></script>
+<script src="../js/admin-produk.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="id" data-bs-theme="light">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Laporan Penjualan - WarTech</title>
+<link rel="icon" href="../img/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+<script>document.documentElement.setAttribute('data-bs-theme',localStorage.getItem('wt_tema')||'light')</script>
+</head>
+<body data-base="../">
+<main id="isi"><div class="wt-card p-3 mb-3 no-print"><div class="row g-2 align-items-end"><div class="col-6 col-md-3"><label class="form-label small" for="jenis">Jenis rekap</label><select id="jenis" class="form-select"><option value="harian">Harian</option><option value="bulanan">Bulanan</option></select></div>
+<div class="col-6 col-md-3" id="gDari"><label class="form-label small" for="dari">Dari tanggal</label><input id="dari" type="date" class="form-control"></div><div class="col-6 col-md-3" id="gSampai"><label class="form-label small" for="sampai">Sampai tanggal</label><input id="sampai" type="date" class="form-control"></div>
+<div class="col-6 col-md-3 d-none" id="gTahun"><label class="form-label small" for="tahun">Tahun</label><input id="tahun" type="number" class="form-control" min="2020" max="2100"></div><div class="col-md-3 d-flex gap-2"><button class="btn btn-wt flex-grow-1" id="cetak"><i class="bi bi-printer"></i> Cetak</button></div></div></div>
+<div class="row g-3 mb-3" id="ring"></div><div class="row g-3"><div class="col-lg-7"><div class="wt-card p-3 mb-3"><h2 class="h6" id="jr">Rekap</h2><canvas id="ch" height="120"></canvas></div><div class="wt-card p-2"><div class="table-responsive"><table class="table wt-table"><thead id="th"></thead><tbody id="tb"></tbody></table></div></div></div>
+<div class="col-lg-5"><div class="wt-card p-2"><div class="p-2 fw-bold">Produk terjual</div><div class="table-responsive"><table class="table wt-table"><thead><tr><th>Kode</th><th>Produk</th><th class="text-end">Qty</th><th class="text-end">Omzet</th></tr></thead><tbody id="tp"></tbody></table></div></div></div></div>
+<p class="small muted mt-3">Hanya transaksi berstatus <b>Selesai</b> yang dihitung. Pesanan menunggu, diproses, atau dibatalkan tidak masuk omzet.</p></main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<script src="../js/data.js"></script>
+<script src="../js/layout.js"></script>
+<script src="../js/admin-laporan.js"></script>
+</body>
+</html>
