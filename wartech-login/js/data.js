@@ -9,7 +9,7 @@ var WT = (function () {
   if (!localStorage.getItem(K.kat)) {
     set(K.kat, [{ id: 'k1', nama: 'Makanan Berat' }, { id: 'k2', nama: 'Mi' }, { id: 'k3', nama: 'Camilan' }, { id: 'k4', nama: 'Minuman' }]);
     var P = function (id, kode, nama, kat, harga, stok, gbr, desk, unggul) {
-      return { id: id, kode: kode, nama: nama, kategoriId: kat, harga: harga, stok: stok, gambar: 'img/' + gbr + '.svg', deskripsi: desk, aktif: true, unggulan: !!unggul };
+      return { id: id, kode: kode, nama: nama, kategoriId: kat, harga: harga, stok: stok, gambar: 'img/' + gbr + '.jfif', deskripsi: desk, aktif: true, unggulan: !!unggul };
     };
     set(K.prd, [
       P('p1', 'MB-001', 'Nasi Goreng', 'k1', 15000, 20, 'nasi-goreng', 'Nasi goreng dengan telur dan acar.', 1),
