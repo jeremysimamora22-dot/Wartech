@@ -5,7 +5,7 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{color:var(--ink);font-weight:800;lette
 a{color:var(--brand)}
 .muted{color:var(--muted)!important}
 .grad-text{background:linear-gradient(90deg,var(--brand),var(--bright));-webkit-background-clip:text;background-clip:text;color:transparent}
-.wt-main{position:relative;padding-top:1.5rem;padding-bottom:3rem}
+.wt-main{position:relative;z-index:1;padding-top:1.5rem;padding-bottom:3rem}
 /* latar: blob lembut */
 .deco{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
 .b{position:absolute;border-radius:50%;filter:blur(40px)}
